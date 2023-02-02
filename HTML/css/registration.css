@@ -1,0 +1,104 @@
+body {
+    width: auto;
+}
+
+.container2 {
+    position: relative;
+    text-align: left;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    padding: 3%;
+}
+
+.maintxt {
+    font-size: 3vw;
+    margin: 0;
+}
+
+.contenttxt {
+    font-size: 1vw;
+}
+
+.registerform {
+    height: inherit;
+}
+
+
+.reglabel {
+    margin-top: 1em;
+}
+
+.form-control {
+    height: 2.5em;
+    margin-top: 0.3em;
+    text-indent: 0.7em;
+    width: 25vw !important;
+    padding: 0 !important;
+}
+
+label {
+    font-size: 1em;
+}
+
+.regbtn {
+    margin-top: 4.5vh !important;
+    width: 25vw !important;
+    text-align: center !important;
+    height: 2.2em !important;
+    border-radius: 18px !important;
+    color: #F88634 !important;
+    border: 2px solid #F88634 !important;
+}
+
+
+
+.register {
+    margin-top: 1.5vh !important;
+    text-align: center !important;
+    color: #414141;
+    font-size: 1em;
+    border: none !important;
+}
+
+#loginlink {
+    text-decoration: none;
+}
+
+footer {
+    position: relative;
+    text-align: center;
+    margin-top: 9vh;
+}
+
+#privacytxt {
+    color: #414141 !important;
+    text-decoration: none;
+}
+
+@media (max-width : 993px) {
+    .loginform {
+        margin-top: 10vh !important;
+    }
+
+    .form-control {
+        width: 100% !important;
+    }
+
+    .forgetpasspage {
+        width: 100% !important;
+    }
+
+    .contenttxt {
+        display: none;
+    }
+
+    footer {
+        padding-bottom: 2vh;
+    }
+
+}
