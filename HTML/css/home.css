@@ -1,0 +1,37 @@
+.navbar {
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+
+
+
+footer {
+    position: realtive;
+    bottom: 0;
+    height: 10vh;
+}
+
+.privacylink {
+    position: absolute;
+    margin-top: 1vh;
+    margin-left: 8vw;
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0;
+    }
+
+
+    footer {
+        text-align: center !important;
+        padding: 0 !important;
+    }
+
+    .privacylink {
+        position: unset;
+        margin-top: 40vh !important;
+        padding: 0;
+    }
+}
