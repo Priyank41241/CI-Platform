@@ -1,9 +1,39 @@
 .navbar {
-    padding-left: 8vw;
-    padding-right: 8vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 
+.navigationBar {
+    justify-content: space-between;
+}
 
+.userProfile {
+    position: relative;
+    width: 3em;
+    height: 3em;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.userProfile img {
+    width: 100%;
+    height: auto;
+}
+
+.mainRow {
+    height: 4em;
+}
+
+.sortRow {
+    height: 4em !important;
+}
+
+.nav-link {
+    border: none;
+    background: none;
+    color: black;
+    text-align: center;
+}
 
 footer {
     position: realtive;

@@ -8,9 +8,12 @@
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <nav class="navbar border-bottom border-2 navbar-expand-md
+                navbar-light
+                bg-light">
+                <div class="container-fluid d-flex navigationBar">
+                    <!-- <a class="navbar-brand" href="#"><img src="images/logo.png"
+                            alt=""></a> -->
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="collapse"
                         data-bs-target="#navbarColor03"
@@ -19,18 +22,18 @@
                         navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse"
+                    <div class="collapse navbar-collapse "
                         id="navbarColor03">
-                        <ul class="navbar-nav me-auto">
-                            <li class="nav-item">
+                        <ul class="navbar-nav me-auto ">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link active" href="#">Home
                                     <span class="visually-hidden">(current)</span>
                                 </a>
-                            </li>
-                            <li class="nav-item">
+                            </li> -->
+                            <li class="nav-item ps-5">
                                 <a class="nav-link" href="#">Stories</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <li class="nav-item ps-5 dropdown">
                                 <a class="nav-link dropdown-toggle"
                                     data-bs-toggle="dropdown" href="#"
                                     role="button" aria-haspopup="true"
@@ -43,9 +46,91 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="container">
-                        <img src="images/" alt="">
+                    <div class="d-flex">
+                        <div class="userProfile">
+                            <img
+                                src="images/user-img.png"
+                                alt="">
+                        </div>
+                        <div class="dropdown ">
+                            <a class="nav-link dropdown-toggle "
+                                data-bs-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="true"
+                                aria-expanded="false">
+                                Evan Donohue
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Option 1</a>
+                                <a class="dropdown-item" href="#">Option 2</a>
+                                <a class="dropdown-item" href="#">Option 3</a>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </nav>
+            <nav class="border-bottom border-5">
+                <div class="row mainRow">
+                    <div class="col-6 pt-3 border-end border-1 text-center">search</div>
+                    <div class="col-5">
+                        <div class="row sortRow">
+                            <div class="col-3 pt-2 dropdown border-end
+                                border-1">
+                                <button class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    role="button" aria-haspopup="true"
+                                    aria-expanded="false">Country</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item">Country
+                                        1</a>
+                                    <a class="dropdown-item">Country
+                                        2</a>
+                                    <a class="dropdown-item">Country
+                                        3</a>
+                                </div>
+                            </div>
+                            <div class="col-3 pt-2 border-end border-1"><button
+                                    class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    role="button" aria-haspopup="true"
+                                    aria-expanded="false">City</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item">City
+                                        1</a>
+                                    <a class="dropdown-item">City
+                                        2</a>
+                                    <a class="dropdown-item">City
+                                        3</a>
+                                </div></div>
+                            <div class="col-3 pt-2 border-end border-1"><button
+                                    class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    role="button" aria-haspopup="true"
+                                    aria-expanded="false">Theme</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item">Theme
+                                        1</a>
+                                    <a class="dropdown-item">Theme
+                                        2</a>
+                                    <a class="dropdown-item">Theme
+                                        3</a>
+                                </div></div>
+                            <div class="col-3 pt-2 border-end border-1"><button
+                                    class="nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    role="button" aria-haspopup="true"
+                                    aria-expanded="false">Skills</button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item">Skill
+                                        1</a>
+                                    <a class="dropdown-item">Skill
+                                        2</a>
+                                    <a class="dropdown-item">Skill
+                                        3</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
                 </div>
             </nav>
         </header>
