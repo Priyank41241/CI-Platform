@@ -9,11 +9,12 @@
 
 .userProfile {
     position: relative;
-    width: 3em;
-    height: 3em;
+    width: 2.5em;
+    height: 2.5em;
     overflow: hidden;
     border-radius: 50%;
 }
+
 
 .userProfile img {
     width: 100%;
@@ -22,17 +23,38 @@
 
 .mainRow {
     height: 4em;
+    padding-left: 10vw;
 }
 
-.sortRow {
-    height: 4em !important;
+.searchBar {
+    border: none;
 }
+
+.dropDowns {
+    width: 25%;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.dropdown-toggle i {
+    width: auto !important;
+    /* margin-left: 20%; */
+}
+
 
 .nav-link {
     border: none;
     background: none;
     color: black;
     text-align: center;
+}
+
+.nav-link i {
+    margin-left: 10%;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
 }
 
 footer {
@@ -50,9 +72,32 @@ footer {
 @media (max-width: 768px) {
 
     .navbar {
-        padding: 0;
+        padding-top: auto;
     }
 
+    .mainRow {
+        padding: auto;
+    }
+
+    .dropDowns {
+        padding-top: 3%;
+    }
+
+    .searchBar {
+        padding-top: auto !important;
+    }
+
+    .mainRow .col-md-1 {
+        display: none;
+    }
+
+    .nav-link i {
+        margin: 2%;
+    }
+
+    .mainRow {
+        height: auto;
+    }
 
     footer {
         text-align: center !important;
@@ -65,3 +110,28 @@ footer {
         padding: 0;
     }
 }
+
+@media (max-width:576px) {
+
+    .searchBar {
+        width: inherit;
+        padding: auto;
+    }
+}
+
+@media (max-width:767px) {
+
+    .backdropdown {
+        order: 1 !important;
+    }
+
+    .navbar-collapse {
+        order: 2 !important;
+    }
+}
+
+/* @media (width=767px) {
+    .frontdropdown {
+        display: none !important;
+    }
+} */
