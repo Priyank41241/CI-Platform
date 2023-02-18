@@ -32,7 +32,7 @@
 
 .mission-list {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2em;
 }
 
@@ -61,14 +61,15 @@
     width: fit-content;
     border: 1px solid gray;
     border-radius: 20px;
-    translate: 0 50% 1em;
+    translate: 0 50%;
     background-color: white;
 }
 
 
 
-.showlist .mission-list {
+.showlist.mission-list {
     grid-template-columns: 100% !important;
+
 }
 
 .showlist .mission {
@@ -80,6 +81,12 @@
 
 @media (max-width: 992px) {
     .mission-list {
-        grid-template-columns: auto auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 576px) {
+    .mission-list {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

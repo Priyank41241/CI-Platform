@@ -14,7 +14,7 @@
         </header>
         <main class="d-flex flex-column">
             <div></div>
-            <div class="container mt-3 d-flex flex-column">
+            <div class="container-fluid mt-3 d-flex flex-column">
                 <div class="d-flex flex-row justify-content-around">
                     <div class="container-fluid fs-3">Explore <b>72 missions</b></div>
                     <select class="sortBy">
@@ -392,14 +392,14 @@
                                     <div class="d-flex mt-4
                                         justify-content-between">
                                         <div class="d-grid gridctnr">
-                                            <img class="pt-2 pe-3"
+                                            <img class="align-self-center pe-3"
                                                 src="images/Seats-left.png"
                                                 alt="">
                                             <div>10</div>
                                             <div>Seats left</div>
                                         </div>
                                         <div class="d-grid gridctnr">
-                                            <img class="pt-2 pe-3"
+                                            <img class="align-self-center pe-3"
                                                 src="images/deadline.png"
                                                 alt="">
                                             <div>09/01/2019</div>
@@ -428,7 +428,7 @@ const missionList = document.querySelector('.mission-list');
 const gridViewBtn = document.getElementById('grid-active-btn');
 const detailsViewBtn = document.getElementById('details-active-btn');
 
-// gridViewBtn.classList.add('active-btn');
+gridViewBtn.classList.add('active');
 
 gridViewBtn.addEventListener('click', () => {
     gridViewBtn.classList.add('active');
