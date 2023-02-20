@@ -7,6 +7,7 @@
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/listGridToggle.css">
     </head>
     <body>
         <header>
@@ -17,41 +18,14 @@
                     <!-- <a class="navbar-brand" href="#"><img src="images/logo.png"
                             alt=""></a> -->
                     <button class="navbar-toggler order-0" type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarColor03"
-                        aria-controls="navbarColor03"
-                        aria-expanded="false" aria-label="Toggle
-                        navigation">
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample"
+                        aria-controls="offcanvasExample">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <!-- <div class="d-flex d-md-none frontdropdown">
-                        <div class="userProfile">
-                            <img
-                                src="images/user-img.png"
-                                alt="">
-                        </div>
-                        <div class="dropdown ">
-                            <a class="nav-link dropdown-toggle "
-                                data-bs-toggle="dropdown" href="#"
-                                role="button" aria-haspopup="true"
-                                aria-expanded="false">
-                                Evan Donohue <i class="bi bi-chevron-down"></i>
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Option 1</a>
-                                <a class="dropdown-item" href="#">Option 2</a>
-                                <a class="dropdown-item" href="#">Option 3</a>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="collapse navbar-collapse order-1"
                         id="navbarColor03">
                         <ul class="navbar-nav me-auto ">
-                            <!-- <li class="nav-item">
-                                <a class="nav-link active" href="#">Home
-                                    <span class="visually-hidden">(current)</span>
-                                </a>
-                            </li> -->
                             <li class="nav-item ps-5">
                                 <a class="nav-link" href="#">Stories</a>
                             </li>
@@ -68,8 +42,38 @@
                                 </div>
                             </li>
                         </ul>
-
-
+                    </div>
+                    <div class="offcanvas offcanvas-start" tabindex="-1"
+                        id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title"
+                                id="offcanvasExampleLabel">Menubar</h5>
+                            <button type="button" class="btn-close"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="offCanvas">
+                                <li class="">
+                                    <a class="nav-link" href="#">Stories</a>
+                                </li>
+                                <li class="dropdown">
+                                    <a class="nav-link dropdown-toggle"
+                                        data-bs-toggle="dropdown" href="#"
+                                        role="button" aria-haspopup="true"
+                                        aria-expanded="false">Policy<i class="bi
+                                            bi-chevron-down"></i></a>
+                                    <div class="dropdown-menu abcd">
+                                        <a class="dropdown-item" href="#">Policy
+                                            1</a>
+                                        <a class="dropdown-item" href="#">Policy
+                                            2</a>
+                                        <a class="dropdown-item" href="#">Policy
+                                            3</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="d-flex backdropdown order-2">
                         <div class="userProfile">
@@ -106,7 +110,8 @@
                                 aria-label="Search">
                         </form>
                     </div>
-                    <div class="col-md-5 d-flex container p-0">
+
+                    <div class="col-md-5 collapse d-flex container p-0">
                         <div class="dropdown border-end border-1 dropDowns">
                             <div class="dropdown-toggle"
                                 data-bs-toggle="dropdown">
@@ -186,38 +191,446 @@
                     <div class="col-md-1"></div>
                 </div>
             </nav>
-
         </header>
-        <main>
-            <div class="container-fluid h-100 bg-info">
-                MainBodyArea
-                <p>1</p>
-                <p>2</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
-                <p>3</p>
+        <main class="d-flex flex-column">
+            <div></div>
+            <div class="container-fluid mt-3 d-flex flex-column">
+                <div class="d-flex flex-row justify-content-around">
+                    <div class="container-fluid fs-3">Explore <b>72 missions</b></div>
+                    <select class="sortBy">
+                        <option value="" hidden selected>Sort by</option>
+                        <option value="Country">Country</option>
+                        <option value="City">City</option>
+                        <option value="Theme">Theme</option>
+                        <option value="Skills">Skills</option>
+                    </select>
+                    <div class="d-flex toggleRowicon
+                        justify-content-evenly">
+                        <div class="icons d-flex btn-group">
+                            <button type="button" class="grid-button active"
+                                id="grid-active-btn">
+                                <i class="bi p-0 bi-grid"></i>
+                            </button>
+                            <button type="button" class="list-button "
+                                id="details-active-btn">
+                                <i class="bi p-0 bi-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-list mt-5">
+                    <div class="mission card">
+                        <div class="cardImg">
+                            <img class="card-img-top"
+                                src="images/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="cardtxt">
+                                <h4 class="card-title">Grow-Trees-On-the-path-to-environment-sustainability</h4>
+                                <p class="card-text">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur
+                                    adipisicing elit. Reiciendis laudantium
+                                    culpa
+                                    exercitationem nemo dolores amet
+                                    molestiae
+                                    obcaecati,</p>
+
+                            </div>
+                            <div class="ratingclass mt-3">
+                                <p class="align-self-center m-0"><b>Tree
+                                        Canada</b></p>
+                                <div class="rating fs-5">
+                                    <span class="star" data-value="1"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="2"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="3"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="4"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="5"><i
+                                            class="bi bi-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="mission-detail">
+                                <div class=" container timeline
+                                    text-center">From 10/01/2019 until
+                                    25/2/2019</div>
+                                <div class="border-top properties
+                                    border-bottom">
+                                    <div class="d-flex mt-4
+                                        justify-content-between">
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/Seats-left.png"
+                                                alt="">
+                                            <div>10</div>
+                                            <div>Seats left</div>
+                                        </div>
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/deadline.png"
+                                                alt="">
+                                            <div>09/01/2019</div>
+                                            <div>Deadline</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" mt-3 apply">
+                                <a href="#" class="btn border-warning
+                                    text-warning apply-btn
+                                    ">Apply <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission card">
+                        <div class="cardImg">
+                            <img class="card-img-top"
+                                src="images/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="cardtxt">
+                                <h4 class="card-title">Grow-Trees-On-the-path-to-environment-sustainability</h4>
+                                <p class="card-text">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur
+                                    adipisicing elit. Reiciendis laudantium
+                                    culpa
+                                    exercitationem nemo dolores amet
+                                    molestiae
+                                    obcaecati,</p>
+
+                            </div>
+                            <div class="ratingclass mt-3">
+                                <p class="align-self-center m-0"><b>Tree
+                                        Canada</b></p>
+                                <div class="rating fs-5">
+                                    <span class="star" data-value="1"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="2"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="3"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="4"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="5"><i
+                                            class="bi bi-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="mission-detail">
+                                <div class=" container timeline
+                                    text-center">From 10/01/2019 until
+                                    25/2/2019</div>
+                                <div class="border-top properties
+                                    border-bottom">
+                                    <div class="d-flex mt-4
+                                        justify-content-between">
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/Seats-left.png"
+                                                alt="">
+                                            <div>10</div>
+                                            <div>Seats left</div>
+                                        </div>
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/deadline.png"
+                                                alt="">
+                                            <div>09/01/2019</div>
+                                            <div>Deadline</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" mt-3 apply">
+                                <a href="#" class="btn border-warning
+                                    text-warning apply-btn
+                                    ">Apply <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission card">
+                        <div class="cardImg">
+                            <img class="card-img-top"
+                                src="images/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="cardtxt">
+                                <h4 class="card-title">Grow-Trees-On-the-path-to-environment-sustainability</h4>
+                                <p class="card-text">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur
+                                    adipisicing elit. Reiciendis laudantium
+                                    culpa
+                                    exercitationem nemo dolores amet
+                                    molestiae
+                                    obcaecati,</p>
+
+                            </div>
+                            <div class="ratingclass mt-3">
+                                <p class="align-self-center m-0"><b>Tree
+                                        Canada</b></p>
+                                <div class="rating fs-5">
+                                    <span class="star" data-value="1"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="2"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="3"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="4"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="5"><i
+                                            class="bi bi-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="mission-detail">
+                                <div class=" container timeline
+                                    text-center">From 10/01/2019 until
+                                    25/2/2019</div>
+                                <div class="border-top properties
+                                    border-bottom">
+                                    <div class="d-flex mt-4
+                                        justify-content-between">
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/Seats-left.png"
+                                                alt="">
+                                            <div>10</div>
+                                            <div>Seats left</div>
+                                        </div>
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/deadline.png"
+                                                alt="">
+                                            <div>09/01/2019</div>
+                                            <div>Deadline</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" mt-3 apply">
+                                <a href="#" class="btn border-warning
+                                    text-warning apply-btn
+                                    ">Apply <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission card">
+                        <div class="cardImg">
+                            <img class="card-img-top"
+                                src="images/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="cardtxt">
+                                <h4 class="card-title">Grow-Trees-On-the-path-to-environment-sustainability</h4>
+                                <p class="card-text">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur
+                                    adipisicing elit. Reiciendis laudantium
+                                    culpa
+                                    exercitationem nemo dolores amet
+                                    molestiae
+                                    obcaecati,</p>
+
+                            </div>
+                            <div class="ratingclass mt-3">
+                                <p class="align-self-center m-0"><b>Tree
+                                        Canada</b></p>
+                                <div class="rating fs-5">
+                                    <span class="star" data-value="1"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="2"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="3"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="4"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="5"><i
+                                            class="bi bi-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="mission-detail">
+                                <div class=" container timeline
+                                    text-center">From 10/01/2019 until
+                                    25/2/2019</div>
+                                <div class="border-top properties
+                                    border-bottom">
+                                    <div class="d-flex mt-4
+                                        justify-content-between">
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/Seats-left.png"
+                                                alt="">
+                                            <div>10</div>
+                                            <div>Seats left</div>
+                                        </div>
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/deadline.png"
+                                                alt="">
+                                            <div>09/01/2019</div>
+                                            <div>Deadline</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" mt-3 apply">
+                                <a href="#" class="btn border-warning
+                                    text-warning apply-btn
+                                    ">Apply <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission card">
+                        <div class="cardImg">
+                            <img class="card-img-top"
+                                src="images/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="cardtxt">
+                                <h4 class="card-title">Grow-Trees-On-the-path-to-environment-sustainability</h4>
+                                <p class="card-text">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur
+                                    adipisicing elit. Reiciendis laudantium
+                                    culpa
+                                    exercitationem nemo dolores amet
+                                    molestiae
+                                    obcaecati,</p>
+
+                            </div>
+                            <div class="ratingclass mt-3">
+                                <p class="align-self-center m-0"><b>Tree
+                                        Canada</b></p>
+                                <div class="rating fs-5">
+                                    <span class="star" data-value="1"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="2"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="3"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="4"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="5"><i
+                                            class="bi bi-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="mission-detail">
+                                <div class=" container timeline
+                                    text-center">From 10/01/2019 until
+                                    25/2/2019</div>
+                                <div class="border-top properties
+                                    border-bottom">
+                                    <div class="d-flex mt-4
+                                        justify-content-between">
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/Seats-left.png"
+                                                alt="">
+                                            <div>10</div>
+                                            <div>Seats left</div>
+                                        </div>
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/deadline.png"
+                                                alt="">
+                                            <div>09/01/2019</div>
+                                            <div>Deadline</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" mt-3 apply">
+                                <a href="#" class="btn border-warning
+                                    text-warning apply-btn
+                                    ">Apply <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission card">
+                        <div class="cardImg">
+                            <img class="card-img-top"
+                                src="images/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                alt="">
+                        </div>
+                        <div class="card-body">
+                            <div class="cardtxt">
+                                <h4 class="card-title">Grow-Trees-On-the-path-to-environment-sustainability</h4>
+                                <p class="card-text">Lorem ipsum dolor sit
+                                    amet
+                                    consectetur
+                                    adipisicing elit. Reiciendis laudantium
+                                    culpa
+                                    exercitationem nemo dolores amet
+                                    molestiae
+                                    obcaecati,</p>
+
+                            </div>
+                            <div class="ratingclass mt-3">
+                                <p class="align-self-center m-0"><b>Tree
+                                        Canada</b></p>
+                                <div class="rating fs-5">
+                                    <span class="star" data-value="1"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="2"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="3"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="4"><i
+                                            class="bi bi-star"></i></span>
+                                    <span class="star" data-value="5"><i
+                                            class="bi bi-star"></i></span>
+                                </div>
+                            </div>
+                            <div class="mission-detail">
+                                <div class=" container timeline
+                                    text-center">From 10/01/2019 until
+                                    25/2/2019</div>
+                                <div class="border-top properties
+                                    border-bottom">
+                                    <div class="d-flex mt-4
+                                        justify-content-between">
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/Seats-left.png"
+                                                alt="">
+                                            <div>10</div>
+                                            <div>Seats left</div>
+                                        </div>
+                                        <div class="d-grid gridctnr">
+                                            <img class="pt-2 pe-3"
+                                                src="images/deadline.png"
+                                                alt="">
+                                            <div>09/01/2019</div>
+                                            <div>Deadline</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" mt-3 apply">
+                                <a href="#" class="btn border-warning
+                                    text-warning apply-btn
+                                    ">Apply <i
+                                        class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+            <div></div>
         </main>
         <footer class=" container-fluid border-2 border-top">
 
@@ -228,3 +641,23 @@
 </html>
 
 <script src="js/bootstrap.bundle.min.js"></script>
+<script>
+    const missionList = document.querySelector('.mission-list');
+    const gridViewBtn = document.getElementById('grid-active-btn');
+    const detailsViewBtn = document.getElementById('details-active-btn');
+    
+    gridViewBtn.classList.add('active');
+    
+            gridViewBtn.addEventListener('click', () => {
+            gridViewBtn.classList.add('active');
+            detailsViewBtn.classList.remove('active');
+            missionList.classList.remove('showlist');
+        });
+    
+        detailsViewBtn.addEventListener('click', () => {
+            detailsViewBtn.classList.add('active');
+            gridViewBtn.classList.remove("active");
+            missionList.classList.add("showlist");
+        });
+
+    </script>

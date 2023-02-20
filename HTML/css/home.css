@@ -33,7 +33,12 @@
 .dropDowns {
     width: 25%;
     text-align: center;
-    padding-top: 3%;
+    display: flex;
+    align-items: center;
+}
+
+.dropDowns div {
+    width: 100%;
 }
 
 .dropdown-toggle i {
@@ -117,6 +122,8 @@ footer {
         width: inherit;
         padding: auto;
     }
+
+
 }
 
 @media (max-width:767px) {
@@ -135,3 +142,17 @@ footer {
         display: none !important;
     }
 } */
+
+.offcanvas {
+    width: 40vw;
+}
+
+.abcd .dropdown-item {
+    max-width: fit-content;
+}
+
+.offCanvas {
+    list-style-type: none;
+    padding: 0;
+    text-align: start;
+}
